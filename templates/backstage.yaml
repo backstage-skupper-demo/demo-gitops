@@ -12,3 +12,6 @@ spec:
   destination:
     server: "https://kubernetes.default.svc"
     namespace: backstage
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

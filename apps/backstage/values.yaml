@@ -25,7 +25,11 @@ backstage:
             key: postgres-password
             name: "{{ include \"backstage.postgresql.fullname\" . }}"
     installDir: /opt/app-root/src
-  
+    appConfig: |
+      catalog:
+        locations:
+          - type: url
+            target: https://github.com/backstage-skupper-demo/backstage-catalog/blob/master/catalog-info.yaml
   ingress:
     enabled: true
     host: backstage.apps.example.com
