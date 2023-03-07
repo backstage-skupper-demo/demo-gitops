@@ -5,13 +5,16 @@ metadata:
   namespace: openshift-gitops
 spec:
   project: default
-  source:
-    chart: backstage
-    repoURL: https://backstage.github.io/charts
-    targetRevision: 0.17.0
-    helm:
-      valueFiles:
-      - backstage-values.yaml
+  sources:
+    - repoURL: https://github.com/backstage-skupper-demo/demo-gitops
+      targetRevision: main
+      ref: demo-gitops
+    - chart: backstage
+      repoURL: https://backstage.github.io/charts
+      targetRevision: 0.17.0
+      helm:
+        valueFiles:
+        - $demo-gitops/backstage-values.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: backstage
