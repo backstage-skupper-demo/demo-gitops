@@ -103,7 +103,7 @@ backstage:
           entityFilename: catalog-info.yaml
           pullRequestBranchName: backstage-integration
         rules:
-          - allow: [Component, System, API, Resource, Location]
+          - allow: [Component, System, API, Resource, Location, Template]
         locations:
           - type: url
             target: https://github.com/backstage-skupper-demo/backstage-catalog/blob/master/catalog-info.yaml
