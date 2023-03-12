@@ -107,6 +107,8 @@ backstage:
         locations:
           - type: url
             target: https://github.com/backstage-skupper-demo/backstage-catalog/blob/master/catalog-info.yaml
+          - type: url
+            target: https://github.com/backstage-skupper-demo/backstage-catalog/blob/master/templates/new-project.yaml
     #   catalog:
     #     locations:
     #       - type: url
