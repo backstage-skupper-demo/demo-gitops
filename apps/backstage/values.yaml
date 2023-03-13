@@ -117,8 +117,15 @@ backstage:
             target: https://github.com/backstage-skupper-demo/backstage-catalog/blob/master/templates/new-project/new-project.yaml
           - type: url
             target: https://github.com/backstage-skupper-demo/backstage-catalog/blob/master/templates/new-site/new-site.yaml
-          - type: url
-            target: https://github.com/backstage-skupper-demo/project-repo/
+        providers:
+          github:
+            wildcardProviderId:
+              organization: 'backstage-catalog' # string
+              catalogPath: '/catalog/*.yaml' # this will search all folders for files that end in .yaml
+              filters: # optional filters
+                branch: 'master' # optional string
+                repository: 'project-repo' # optional Regex
+
     #   catalog:
     #     locations:
     #       - type: url
