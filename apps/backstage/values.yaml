@@ -113,6 +113,8 @@ backstage:
             target: https://github.com/backstage-skupper-demo/backstage-catalog/blob/master/templates/new-project/new-project.yaml
           - type: url
             target: https://github.com/backstage-skupper-demo/backstage-catalog/blob/master/templates/new-site/new-site.yaml
+          - type: url
+            target: https://github.com/backstage-skupper-demo/project-repo/
     #   catalog:
     #     locations:
     #       - type: url
