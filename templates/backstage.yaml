@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: backstage-project-repo
+  name: backstage
   namespace: openshift-gitops
 spec:
   project: default
