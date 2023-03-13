@@ -1,0 +1,3 @@
+FROM ghcr.io/janus-idp/redhat-backstage-build:latest
+
+RUN yarn add --cwd packages/backend @backstage/plugin-catalog-backend-module-github
