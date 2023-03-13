@@ -1,5 +1,7 @@
 backstage:
   backstage:
+    extraEnvVarsSecrets:
+    - github-pat
     image:
       registry: ghcr.io
       repository: janus-idp/redhat-backstage-build
