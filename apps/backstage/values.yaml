@@ -120,7 +120,7 @@ backstage:
         providers:
           github:
             wildcardProviderId:
-              organization: 'backstage-catalog' # string
+              organization: 'backstage-skupper-demo' # string
               catalogPath: '/catalog/*.yaml' # this will search all folders for files that end in .yaml
               filters: # optional filters
                 branch: 'master' # optional string
