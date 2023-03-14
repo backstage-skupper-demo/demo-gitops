@@ -3,8 +3,8 @@ backstage:
     extraEnvVarsSecrets:
     - github-pat
     image:
-      registry: ghcr.io
-      repository: janus-idp/redhat-backstage-build
+      registry: quay.io
+      repository: mathianasj/backstage
       tag: latest
     extraEnvVars:
       - name: "APP_CONFIG_app_baseUrl"
