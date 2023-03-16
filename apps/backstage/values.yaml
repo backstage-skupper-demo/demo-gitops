@@ -124,7 +124,13 @@ backstage:
               catalogPath: '/catalog/*.yaml' # this will search all folders for files that end in .yaml
               filters: # optional filters
                 branch: 'master' # optional string
-                repository: 'project-repo' # optional Regex
+                # repository: 'project-repo' # optional Regex
+            templateProvider:
+              organization: 'backstage-skupper-demo' # string
+              catalogPath: '/templates/*.yaml' # this will search all folders for files that end in .yaml
+              filters: # optional filters
+                branch: 'master' # optional string
+                repository: 'backstage-catalog' # optional Regex
 
     #   catalog:
     #     locations:
