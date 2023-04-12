@@ -26,6 +26,15 @@ backstage:
           secretKeyRef:
             key: postgres-password
             name: "{{ include \"backstage.postgresql.fullname\" . }}"
+      - name: K8S_CLUSTER_NAME
+        value: "local"
+      - name: K8S_CLUSTER_URL
+        value: "http://"
+      - name: K8S_CLUSTER_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: token
+            name: backstage-svc 
     installDir: /opt/app-root/src
     appConfig: |
       app:
@@ -132,6 +141,17 @@ backstage:
                 branch: 'master' # optional string
                 repository: 'backstage-catalog' # optional Regex
 
+      kubernetes:
+        serviceLocatorMethod:
+          type: 'multiTenant'
+        clusterLocatorMethods:
+          - type: 'config'
+            clusters:
+              - name: ${K8S_CLUSTER_NAME}
+                url: ${K8S_CLUSTER_URL}
+                authProvider: 'serviceAccount'
+                skipTLSVerify: true
+                serviceAccountToken: ${K8S_CLUSTER_TOKEN}
     #   catalog:
     #     locations:
     #       - type: url
