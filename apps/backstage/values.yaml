@@ -154,6 +154,7 @@ backstage:
                 serviceAccountToken: ${K8S_CLUSTER_TOKEN}
       enabled:
         github: true
+        kubernetes: true
     #   catalog:
     #     locations:
     #       - type: url
