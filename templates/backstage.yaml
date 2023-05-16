@@ -1,3 +1,25 @@
+kind: Project
+apiVersion: project.openshift.io/v1
+metadata:
+  name: backstage
+  # annotations:
+  #   "helm.sh/hook": "pre-install"
+spec: {}
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: backstage-gitops
+  namespace: backstage
+subjects:
+  - kind: ServiceAccount
+    name: openshift-gitops-argocd-application-controller
+    namespace: openshift-gitops
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
