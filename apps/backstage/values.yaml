@@ -152,6 +152,8 @@ backstage:
                 authProvider: 'serviceAccount'
                 skipTLSVerify: true
                 serviceAccountToken: ${K8S_CLUSTER_TOKEN}
+      enabled:
+        github: true
     #   catalog:
     #     locations:
     #       - type: url
