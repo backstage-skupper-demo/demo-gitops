@@ -4,7 +4,7 @@ backstage:
     - github-pat
     image:
       registry: quay.io
-      repository: mathianasj/backstage
+      repository: janus-idp/backstage-showcase
       tag: latest
     extraEnvVars:
       - name: "APP_CONFIG_app_baseUrl"
