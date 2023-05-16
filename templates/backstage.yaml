@@ -34,7 +34,7 @@ spec:
     helm:
       parameters:
         - name: backstage.ingress.host
-          value: { .Values.ingress.host }
+          value: {{ .Values.ingress.host }}
   destination:
     server: "https://kubernetes.default.svc"
     namespace: backstage
