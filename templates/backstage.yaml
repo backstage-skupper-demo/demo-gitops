@@ -31,6 +31,10 @@ spec:
     repoURL: https://github.com/backstage-skupper-demo/demo-gitops
     targetRevision: master
     path: apps/backstage
+    helm:
+      parameters:
+        - name: backstage.ingress.host
+          value: { .Values.ingress.host }
   destination:
     server: "https://kubernetes.default.svc"
     namespace: backstage
